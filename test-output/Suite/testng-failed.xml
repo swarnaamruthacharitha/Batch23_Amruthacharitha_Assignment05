@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]">
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="Utilites.Reporting"/>
+  </listeners>
+  <test parallel="none" name="Test(failed)" preserve-order="false">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="TestRunner.phpTravels">
+        <methods>
+          <include name="LunchBrowser"/>
+          <include name="SuiteStarted"/>
+          <include name="SuitedFinished"/>
+          <include name="loginTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
